@@ -6,6 +6,24 @@ Analytics.js is open source and is one of the libraries that powers [Segment], t
 
 For our mobile and server-side data collection libraries, check out our [libraries] page.
 
+## Development
+
+1. `npm install -g yarn`
+2. The project uses a lot of github URLs - which uses github API _a lot_, so follow [these instructions for adding your github token to your ~/.netrc file](https://github.com/duojs/duo#authenticate-with-github)
+3. `make distclean` - deletes many things
+4. `make build` - This will remove and then update the analytics.js and analytics.min.js file in the root of this repository.
+
+This will create a new copy of analytics.js and analytics.min.js
+
+
+### Adding a new integration
+
+1. Look at the package.json file. This should list almost all of the integrations available, you can
+find more at [https://github.com/segment-integrations/](https://github.com/segment-integrations/)
+2. Add the new integration to lib/integrations.js
+3. Update your code wherever you actually run your `analytics.initialize` to include the new integration and its options (see the lib/index.js of the integration on github)
+
+
 ## Documentation
 
 First, read the [Analytics.js QuickStart], which contains installation instructions and a brief overview of what Analytics.js does and how it works.
