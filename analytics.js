@@ -3,7 +3,7 @@
 /**
  * Analytics.js
  *
- * (C) 2015 Segment.io Inc.
+ * (C) 2017 Segment Inc.
  */
 
 var analytics = require('@segment/analytics.js-core');
@@ -13,13 +13,13 @@ var Integrations = require('./integrations');
  * Expose the `analytics` singleton.
  */
 
-module.exports = exports = analytics;
+module.exports = exports = analytics
 
 /**
  * Expose require.
  */
 
-analytics.require = require;
+analytics.require = require
 
 /**
  * Expose `VERSION`.
@@ -35,9 +35,9 @@ Object.keys(Integrations).forEach(function(name) {
   analytics.use(Integrations[name]);
 });
 
-},{"../package.json":111,"./integrations":2,"@segment/analytics.js-core":21}],2:[function(require,module,exports){
-/* eslint quote-props: off */
-'use strict';
+},{"../package.json":109,"./integrations":2,"@segment/analytics.js-core":21}],2:[function(require,module,exports){
+/* eslint quote-props: 0 */
+'use strict'
 
 /*
  Add all integrations you want registered here.
@@ -48,8 +48,6 @@ module.exports = {
   'amplitude': require('@segment/analytics.js-integration-amplitude'),
   'comscore': require('@segment/analytics.js-integration-comscore'),
   'facebook-pixel': require('@segment/analytics.js-integration-facebook-pixel'),
-  // 'google-analytics': require('@segment/analytics.js-integration-google-analytics'),
-  // 'optimizely': require('@segment/analytics.js-integration-optimizely'),
   'parsely': require('@segment/analytics.js-integration-parsely'),
   'quantcast': require('@segment/analytics.js-integration-quantcast')
 };
@@ -346,7 +344,7 @@ var clone = function clone(obj) {
 
 module.exports = clone;
 
-},{"component-type":67}],6:[function(require,module,exports){
+},{"component-type":65}],6:[function(require,module,exports){
 'use strict';
 
 /*
@@ -1934,7 +1932,7 @@ module.exports.memory = memory;
 module.exports.store = store;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./cookie":18,"./group":20,"./memory":22,"./normalize":23,"./pageDefaults":24,"./store":25,"./user":26,"@ndhoule/after":3,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/each":8,"@ndhoule/foldl":11,"@ndhoule/keys":13,"@ndhoule/pick":15,"@segment/is-meta":47,"@segment/prevent-default":51,"bind-all":55,"component-emitter":62,"component-event":63,"component-querystring":65,"component-type":67,"debug":27,"is":77,"next-tick":84,"segmentio-facade":94}],18:[function(require,module,exports){
+},{"./cookie":18,"./group":20,"./memory":22,"./normalize":23,"./pageDefaults":24,"./store":25,"./user":26,"@ndhoule/after":3,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/each":8,"@ndhoule/foldl":11,"@ndhoule/keys":13,"@ndhoule/pick":15,"@segment/is-meta":47,"@segment/prevent-default":51,"bind-all":55,"component-emitter":60,"component-event":61,"component-querystring":63,"component-type":65,"debug":27,"is":75,"next-tick":82,"segmentio-facade":92}],18:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2068,7 +2066,7 @@ module.exports = bindAll(new Cookie());
 
 module.exports.Cookie = Cookie;
 
-},{"@ndhoule/clone":5,"@ndhoule/defaults":6,"@segment/top-domain":53,"bind-all":55,"component-cookie":57,"debug":27,"json3":78}],19:[function(require,module,exports){
+},{"@ndhoule/clone":5,"@ndhoule/defaults":6,"@segment/top-domain":53,"bind-all":55,"component-cookie":57,"debug":27,"json3":76}],19:[function(require,module,exports){
 'use strict';
 
 /*
@@ -2371,7 +2369,7 @@ module.exports = bindAll(new Group());
 
 module.exports.Group = Group;
 
-},{"./entity":19,"bind-all":55,"debug":27,"inherits":75}],21:[function(require,module,exports){
+},{"./entity":19,"bind-all":55,"debug":27,"inherits":73}],21:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2557,7 +2555,7 @@ function normalize(msg, list) {
   }
 }
 
-},{"@ndhoule/defaults":6,"@ndhoule/each":8,"@ndhoule/includes":12,"@ndhoule/map":14,"component-type":67,"debug":27}],24:[function(require,module,exports){
+},{"@ndhoule/defaults":6,"@ndhoule/each":8,"@ndhoule/includes":12,"@ndhoule/map":14,"component-type":65,"debug":27}],24:[function(require,module,exports){
 'use strict';
 
 /*
@@ -2621,7 +2619,7 @@ function canonicalUrl(search) {
 
 module.exports = pageDefaults;
 
-},{"@ndhoule/includes":12,"@segment/canonical":45,"component-url":68}],25:[function(require,module,exports){
+},{"@ndhoule/includes":12,"@segment/canonical":45,"component-url":66}],25:[function(require,module,exports){
 'use strict';
 
 /*
@@ -2889,7 +2887,7 @@ module.exports = bindAll(new User());
 
 module.exports.User = User;
 
-},{"./cookie":18,"./entity":19,"bind-all":55,"component-cookie":57,"debug":27,"inherits":75,"uuid":110}],27:[function(require,module,exports){
+},{"./cookie":18,"./entity":19,"bind-all":55,"component-cookie":57,"debug":27,"inherits":73,"uuid":108}],27:[function(require,module,exports){
 
 /**
  * Expose `debug()` as the module.
@@ -3453,7 +3451,7 @@ function mapRevenueAttributes(track) {
   };
 }
 
-},{"@ndhoule/each":8,"@segment/analytics.js-integration":30,"@segment/top-domain":53,"component-bind":56,"do-when":72,"is":77,"segmentio-facade":94}],30:[function(require,module,exports){
+},{"@ndhoule/each":8,"@segment/analytics.js-integration":30,"@segment/top-domain":53,"component-bind":56,"do-when":70,"is":75,"segmentio-facade":92}],30:[function(require,module,exports){
 'use strict';
 
 /**
@@ -3518,7 +3516,7 @@ function createIntegration(name) {
 
 module.exports = createIntegration;
 
-},{"./protos":31,"./statics":32,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":56,"debug":70,"slug-component":100}],31:[function(require,module,exports){
+},{"./protos":31,"./statics":32,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":56,"debug":68,"slug-component":98}],31:[function(require,module,exports){
 'use strict';
 
 /**
@@ -4001,7 +3999,7 @@ function render(template, locals) {
   }, {}, template.attrs);
 }
 
-},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":46,"@segment/load-script":50,"analytics-events":33,"component-emitter":62,"is":77,"load-iframe":79,"next-tick":84,"to-no-case":103}],32:[function(require,module,exports){
+},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":46,"@segment/load-script":50,"analytics-events":33,"component-emitter":60,"is":75,"load-iframe":77,"next-tick":82,"to-no-case":101}],32:[function(require,module,exports){
 'use strict';
 
 /**
@@ -4166,7 +4164,7 @@ function objectify(str) {
   };
 }
 
-},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":62,"domify":73}],33:[function(require,module,exports){
+},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":60,"domify":71}],33:[function(require,module,exports){
 
 module.exports = {
   // Promotions
@@ -4248,7 +4246,6 @@ var useHttps = require('use-https');
  */
 
 var Comscore = module.exports = integration('comScore')
-  .assumesPageview()
   .global('_comscore')
   .global('COMSCORE')
   .option('c1', '2')
@@ -4260,13 +4257,14 @@ var Comscore = module.exports = integration('comScore')
  * Initialize.
  *
  * @api public
+ *
+ * Does not load script until `page` is called to capture the params on
+ * that initial `page` and pass it in on the inferred native comScore.
  */
 
 Comscore.prototype.initialize = function() {
-  var comScoreOptions = { c1: this.options.c1, c2: this.options.c2 };
-  window._comscore = window._comscore || [comScoreOptions];
-  var tagName = useHttps() ? 'https' : 'http';
-  this.load(tagName, this.ready);
+  this.pageCalledYet = false;
+  this._ready = true; // temporarily switch ready to true so single page call can fire
 };
 
 /**
@@ -4287,18 +4285,52 @@ Comscore.prototype.loaded = function() {
  * @param {Object} page
  */
 
-Comscore.prototype.page = function() {
-  var comScoreOptions = { c1: this.options.c1, c2: this.options.c2 };
-  window.COMSCORE.beacon(comScoreOptions);
+Comscore.prototype.page = function(page) {
+  this.comScoreParams = this.mapComscoreParams(page);
+  
+  if (!this.pageCalledYet) {
+    this._ready = false;
+    this.pageCalledYet = true;
+    this._initialize();
+  } else {
+    window.COMSCORE.beacon(this.comScoreParams);
+  }
 };
 
-},{"@segment/analytics.js-integration":35,"use-https":108}],35:[function(require,module,exports){
+Comscore.prototype._initialize = function() {
+  window._comscore = window._comscore || [this.comScoreParams];
+  var tagName = useHttps() ? 'https' : 'http';
+  this.load(tagName, this.ready);
+};
+
+
+Comscore.prototype.mapComscoreParams = function(page) {
+  var beaconParamMap = this.options.beaconParamMap;
+  var properties = page.properties();
+
+  var comScoreParams = {};
+
+  Object.keys(beaconParamMap).forEach(function(property) {
+    if (property in properties) {
+      var key = beaconParamMap[property];
+      var value = properties[property];
+      comScoreParams[key] = value;
+    }
+  });
+
+  comScoreParams.c1 = this.options.c1;
+  comScoreParams.c2 = this.options.c2;
+
+  return comScoreParams;
+};
+
+},{"@segment/analytics.js-integration":35,"use-https":106}],35:[function(require,module,exports){
 arguments[4][30][0].apply(exports,arguments)
-},{"./protos":36,"./statics":37,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":56,"debug":70,"dup":30,"slug-component":100}],36:[function(require,module,exports){
+},{"./protos":36,"./statics":37,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":56,"debug":68,"dup":30,"slug-component":98}],36:[function(require,module,exports){
 arguments[4][31][0].apply(exports,arguments)
-},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":46,"@segment/load-script":50,"analytics-events":38,"component-emitter":62,"dup":31,"is":77,"load-iframe":79,"next-tick":84,"to-no-case":103}],37:[function(require,module,exports){
+},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":46,"@segment/load-script":50,"analytics-events":38,"component-emitter":60,"dup":31,"is":75,"load-iframe":77,"next-tick":82,"to-no-case":101}],37:[function(require,module,exports){
 arguments[4][32][0].apply(exports,arguments)
-},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":62,"domify":73,"dup":32}],38:[function(require,module,exports){
+},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":60,"domify":71,"dup":32}],38:[function(require,module,exports){
 arguments[4][33][0].apply(exports,arguments)
 },{"dup":33}],39:[function(require,module,exports){
 'use strict';
@@ -4624,7 +4656,7 @@ function formatTraits(analytics) {
   });
 }
 
-},{"@ndhoule/each":8,"@ndhoule/foldl":11,"@segment/analytics.js-integration":42,"dateformat":69,"is":77,"reject":87,"segmentio-facade":94,"to-camel-case":101}],40:[function(require,module,exports){
+},{"@ndhoule/each":8,"@ndhoule/foldl":11,"@segment/analytics.js-integration":42,"dateformat":67,"is":75,"reject":85,"segmentio-facade":92,"to-camel-case":99}],40:[function(require,module,exports){
 'use strict';
 
 /**
@@ -4730,7 +4762,7 @@ Parsely.prototype.track = function(track) {
   * use a helper function to alias track calls. This is because we are
   * using spec'd event names/functions. If we call .track() within them,
   * it will trigger an infinite loop wherein the spec'd functions get called
-  * continuously.
+  * continuously. 
   *
   * See here: https://github.com/segmentio/analytics.js-integration/blob/master/lib/protos.js#L355
   */
@@ -4740,7 +4772,7 @@ Parsely.prototype.track = function(track) {
 /**
  * Parse.ly requires metadata be passed about the video for started AND paused events.
  * Since our video spec does not specify passing any metadata about the video, we need
- * to store it from the videoContentStarted event as a global variable that the
+ * to store it from the videoContentStarted event as a global variable that the 
  * videoPlaybackPaused event can access.
  */
 
@@ -4756,7 +4788,7 @@ Parsely.prototype.videoContentStarted = function(track) {
 
     window.PARSELY.video.trackPlay(vidId, metadata, urlOverride);
   }
-
+  
   return this.trackDynamicEvent(track);
 };
 
@@ -4803,7 +4835,7 @@ Parsely.prototype.parseVideoMetadata = function(track) {
 
   // https://www.parse.ly/help/integration/video/#video-metadata
   // https://paper.dropbox.com/doc/Segment-Video-Spec-jdrVhQdGo9aUTQ2kMsbnx
-  return reject({
+  return reject({ 
     title: track.proxy('properties.title'),
     // Fallback on null to avoid NaN trickling through reject.
     pub_date_tmsp: + new Date(track.proxy('properties.airdate')) || null,
@@ -4814,7 +4846,7 @@ Parsely.prototype.parseVideoMetadata = function(track) {
   });
 };
 
-},{"@ndhoule/defaults":6,"@segment/analytics.js-integration":42,"do-when":72,"is":77,"json3":78,"reject":87}],41:[function(require,module,exports){
+},{"@ndhoule/defaults":6,"@segment/analytics.js-integration":42,"do-when":70,"is":75,"json3":76,"reject":85}],41:[function(require,module,exports){
 'use strict';
 
 /**
@@ -5054,9 +5086,9 @@ function safe(str) {
   if (str) return str.replace(/[^\w\s]|_/gi, '');
 }
 
-},{"@segment/analytics.js-integration":42,"global-queue":74,"is":77,"use-https":108}],42:[function(require,module,exports){
+},{"@segment/analytics.js-integration":42,"global-queue":72,"is":75,"use-https":106}],42:[function(require,module,exports){
 arguments[4][30][0].apply(exports,arguments)
-},{"./protos":43,"./statics":44,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":56,"debug":70,"dup":30,"slug-component":100}],43:[function(require,module,exports){
+},{"./protos":43,"./statics":44,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":56,"debug":68,"dup":30,"slug-component":98}],43:[function(require,module,exports){
 'use strict';
 
 /**
@@ -5526,7 +5558,7 @@ function render(template, locals) {
   }, {}, template.attrs);
 }
 
-},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":46,"@segment/load-script":50,"analytics-events":54,"component-emitter":62,"is":77,"load-iframe":79,"next-tick":84,"to-no-case":103}],44:[function(require,module,exports){
+},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":46,"@segment/load-script":50,"analytics-events":54,"component-emitter":60,"is":75,"load-iframe":77,"next-tick":82,"to-no-case":101}],44:[function(require,module,exports){
 'use strict';
 
 /**
@@ -5691,7 +5723,7 @@ function objectify(str) {
   };
 }
 
-},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":62,"domify":73}],45:[function(require,module,exports){
+},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":60,"domify":71}],45:[function(require,module,exports){
 'use strict';
 
 /**
@@ -5855,7 +5887,7 @@ function array(arr, strict) {
   return arr;
 }
 
-},{"@segment/isodate":49,"component-each":60,"component-type":67}],49:[function(require,module,exports){
+},{"@segment/isodate":49,"component-each":58,"component-type":65}],49:[function(require,module,exports){
 'use strict';
 
 /**
@@ -6005,7 +6037,7 @@ function loadScript(options, cb) {
 
 module.exports = loadScript;
 
-},{"component-type":67,"next-tick":84,"script-onload":88}],51:[function(require,module,exports){
+},{"component-type":65,"next-tick":82,"script-onload":86}],51:[function(require,module,exports){
 'use strict';
 
 /**
@@ -6198,12 +6230,12 @@ module.exports = (function() {
 		store.disabled = true
 	}
 	store.enabled = !store.disabled
-
+	
 	return store
 }())
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"json3":78}],53:[function(require,module,exports){
+},{"json3":76}],53:[function(require,module,exports){
 'use strict';
 
 /**
@@ -6303,7 +6335,7 @@ domain.cookie = cookie;
 
 exports = module.exports = domain;
 
-},{"component-cookie":57,"component-url":68}],54:[function(require,module,exports){
+},{"component-cookie":57,"component-url":66}],54:[function(require,module,exports){
 'use strict';
 
 /**
@@ -6771,433 +6803,7 @@ function decode(value) {
   }
 }
 
-},{"debug":58}],58:[function(require,module,exports){
-(function (process){
-/**
- * This is the web browser implementation of `debug()`.
- *
- * Expose `debug()` as the module.
- */
-
-exports = module.exports = require('./debug');
-exports.log = log;
-exports.formatArgs = formatArgs;
-exports.save = save;
-exports.load = load;
-exports.useColors = useColors;
-exports.storage = 'undefined' != typeof chrome
-               && 'undefined' != typeof chrome.storage
-                  ? chrome.storage.local
-                  : localstorage();
-
-/**
- * Colors.
- */
-
-exports.colors = [
-  '#0000CC', '#0000FF', '#0033CC', '#0033FF', '#0066CC', '#0066FF', '#0099CC',
-  '#0099FF', '#00CC00', '#00CC33', '#00CC66', '#00CC99', '#00CCCC', '#00CCFF',
-  '#3300CC', '#3300FF', '#3333CC', '#3333FF', '#3366CC', '#3366FF', '#3399CC',
-  '#3399FF', '#33CC00', '#33CC33', '#33CC66', '#33CC99', '#33CCCC', '#33CCFF',
-  '#6600CC', '#6600FF', '#6633CC', '#6633FF', '#66CC00', '#66CC33', '#9900CC',
-  '#9900FF', '#9933CC', '#9933FF', '#99CC00', '#99CC33', '#CC0000', '#CC0033',
-  '#CC0066', '#CC0099', '#CC00CC', '#CC00FF', '#CC3300', '#CC3333', '#CC3366',
-  '#CC3399', '#CC33CC', '#CC33FF', '#CC6600', '#CC6633', '#CC9900', '#CC9933',
-  '#CCCC00', '#CCCC33', '#FF0000', '#FF0033', '#FF0066', '#FF0099', '#FF00CC',
-  '#FF00FF', '#FF3300', '#FF3333', '#FF3366', '#FF3399', '#FF33CC', '#FF33FF',
-  '#FF6600', '#FF6633', '#FF9900', '#FF9933', '#FFCC00', '#FFCC33'
-];
-
-/**
- * Currently only WebKit-based Web Inspectors, Firefox >= v31,
- * and the Firebug extension (any Firefox version) are known
- * to support "%c" CSS customizations.
- *
- * TODO: add a `localStorage` variable to explicitly enable/disable colors
- */
-
-function useColors() {
-  // NB: In an Electron preload script, document will be defined but not fully
-  // initialized. Since we know we're in Chrome, we'll just detect this case
-  // explicitly
-  if (typeof window !== 'undefined' && window.process && window.process.type === 'renderer') {
-    return true;
-  }
-
-  // Internet Explorer and Edge do not support colors.
-  if (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
-    return false;
-  }
-
-  // is webkit? http://stackoverflow.com/a/16459606/376773
-  // document is undefined in react-native: https://github.com/facebook/react-native/pull/1632
-  return (typeof document !== 'undefined' && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance) ||
-    // is firebug? http://stackoverflow.com/a/398120/376773
-    (typeof window !== 'undefined' && window.console && (window.console.firebug || (window.console.exception && window.console.table))) ||
-    // is firefox >= v31?
-    // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
-    (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
-    // double check webkit in userAgent just in case we are in a worker
-    (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
-}
-
-/**
- * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
- */
-
-exports.formatters.j = function(v) {
-  try {
-    return JSON.stringify(v);
-  } catch (err) {
-    return '[UnexpectedJSONParseError]: ' + err.message;
-  }
-};
-
-
-/**
- * Colorize log arguments if enabled.
- *
- * @api public
- */
-
-function formatArgs(args) {
-  var useColors = this.useColors;
-
-  args[0] = (useColors ? '%c' : '')
-    + this.namespace
-    + (useColors ? ' %c' : ' ')
-    + args[0]
-    + (useColors ? '%c ' : ' ')
-    + '+' + exports.humanize(this.diff);
-
-  if (!useColors) return;
-
-  var c = 'color: ' + this.color;
-  args.splice(1, 0, c, 'color: inherit')
-
-  // the final "%c" is somewhat tricky, because there could be other
-  // arguments passed either before or after the %c, so we need to
-  // figure out the correct index to insert the CSS into
-  var index = 0;
-  var lastC = 0;
-  args[0].replace(/%[a-zA-Z%]/g, function(match) {
-    if ('%%' === match) return;
-    index++;
-    if ('%c' === match) {
-      // we only are interested in the *last* %c
-      // (the user may have provided their own)
-      lastC = index;
-    }
-  });
-
-  args.splice(lastC, 0, c);
-}
-
-/**
- * Invokes `console.log()` when available.
- * No-op when `console.log` is not a "function".
- *
- * @api public
- */
-
-function log() {
-  // this hackery is required for IE8/9, where
-  // the `console.log` function doesn't have 'apply'
-  return 'object' === typeof console
-    && console.log
-    && Function.prototype.apply.call(console.log, console, arguments);
-}
-
-/**
- * Save `namespaces`.
- *
- * @param {String} namespaces
- * @api private
- */
-
-function save(namespaces) {
-  try {
-    if (null == namespaces) {
-      exports.storage.removeItem('debug');
-    } else {
-      exports.storage.debug = namespaces;
-    }
-  } catch(e) {}
-}
-
-/**
- * Load `namespaces`.
- *
- * @return {String} returns the previously persisted debug modes
- * @api private
- */
-
-function load() {
-  var r;
-  try {
-    r = exports.storage.debug;
-  } catch(e) {}
-
-  // If debug isn't set in LS, and we're in Electron, try to load $DEBUG
-  if (!r && typeof process !== 'undefined' && 'env' in process) {
-    r = process.env.DEBUG;
-  }
-
-  return r;
-}
-
-/**
- * Enable namespaces listed in `localStorage.debug` initially.
- */
-
-exports.enable(load());
-
-/**
- * Localstorage attempts to return the localstorage.
- *
- * This is necessary because safari throws
- * when a user disables cookies/localstorage
- * and you attempt to access it.
- *
- * @return {LocalStorage}
- * @api private
- */
-
-function localstorage() {
-  try {
-    return window.localStorage;
-  } catch (e) {}
-}
-
-}).call(this,require('_process'))
-},{"./debug":59,"_process":86}],59:[function(require,module,exports){
-
-/**
- * This is the common logic for both the Node.js and web browser
- * implementations of `debug()`.
- *
- * Expose `debug()` as the module.
- */
-
-exports = module.exports = createDebug.debug = createDebug['default'] = createDebug;
-exports.coerce = coerce;
-exports.disable = disable;
-exports.enable = enable;
-exports.enabled = enabled;
-exports.humanize = require('ms');
-
-/**
- * Active `debug` instances.
- */
-exports.instances = [];
-
-/**
- * The currently active debug mode names, and names to skip.
- */
-
-exports.names = [];
-exports.skips = [];
-
-/**
- * Map of special "%n" handling functions, for the debug "format" argument.
- *
- * Valid key names are a single, lower or upper-case letter, i.e. "n" and "N".
- */
-
-exports.formatters = {};
-
-/**
- * Select a color.
- * @param {String} namespace
- * @return {Number}
- * @api private
- */
-
-function selectColor(namespace) {
-  var hash = 0, i;
-
-  for (i in namespace) {
-    hash  = ((hash << 5) - hash) + namespace.charCodeAt(i);
-    hash |= 0; // Convert to 32bit integer
-  }
-
-  return exports.colors[Math.abs(hash) % exports.colors.length];
-}
-
-/**
- * Create a debugger with the given `namespace`.
- *
- * @param {String} namespace
- * @return {Function}
- * @api public
- */
-
-function createDebug(namespace) {
-
-  var prevTime;
-
-  function debug() {
-    // disabled?
-    if (!debug.enabled) return;
-
-    var self = debug;
-
-    // set `diff` timestamp
-    var curr = +new Date();
-    var ms = curr - (prevTime || curr);
-    self.diff = ms;
-    self.prev = prevTime;
-    self.curr = curr;
-    prevTime = curr;
-
-    // turn the `arguments` into a proper Array
-    var args = new Array(arguments.length);
-    for (var i = 0; i < args.length; i++) {
-      args[i] = arguments[i];
-    }
-
-    args[0] = exports.coerce(args[0]);
-
-    if ('string' !== typeof args[0]) {
-      // anything else let's inspect with %O
-      args.unshift('%O');
-    }
-
-    // apply any `formatters` transformations
-    var index = 0;
-    args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
-      // if we encounter an escaped % then don't increase the array index
-      if (match === '%%') return match;
-      index++;
-      var formatter = exports.formatters[format];
-      if ('function' === typeof formatter) {
-        var val = args[index];
-        match = formatter.call(self, val);
-
-        // now we need to remove `args[index]` since it's inlined in the `format`
-        args.splice(index, 1);
-        index--;
-      }
-      return match;
-    });
-
-    // apply env-specific formatting (colors, etc.)
-    exports.formatArgs.call(self, args);
-
-    var logFn = debug.log || exports.log || console.log.bind(console);
-    logFn.apply(self, args);
-  }
-
-  debug.namespace = namespace;
-  debug.enabled = exports.enabled(namespace);
-  debug.useColors = exports.useColors();
-  debug.color = selectColor(namespace);
-  debug.destroy = destroy;
-
-  // env-specific initialization logic for debug instances
-  if ('function' === typeof exports.init) {
-    exports.init(debug);
-  }
-
-  exports.instances.push(debug);
-
-  return debug;
-}
-
-function destroy () {
-  var index = exports.instances.indexOf(this);
-  if (index !== -1) {
-    exports.instances.splice(index, 1);
-    return true;
-  } else {
-    return false;
-  }
-}
-
-/**
- * Enables a debug mode by namespaces. This can include modes
- * separated by a colon and wildcards.
- *
- * @param {String} namespaces
- * @api public
- */
-
-function enable(namespaces) {
-  exports.save(namespaces);
-
-  exports.names = [];
-  exports.skips = [];
-
-  var i;
-  var split = (typeof namespaces === 'string' ? namespaces : '').split(/[\s,]+/);
-  var len = split.length;
-
-  for (i = 0; i < len; i++) {
-    if (!split[i]) continue; // ignore empty strings
-    namespaces = split[i].replace(/\*/g, '.*?');
-    if (namespaces[0] === '-') {
-      exports.skips.push(new RegExp('^' + namespaces.substr(1) + '$'));
-    } else {
-      exports.names.push(new RegExp('^' + namespaces + '$'));
-    }
-  }
-
-  for (i = 0; i < exports.instances.length; i++) {
-    var instance = exports.instances[i];
-    instance.enabled = exports.enabled(instance.namespace);
-  }
-}
-
-/**
- * Disable debug output.
- *
- * @api public
- */
-
-function disable() {
-  exports.enable('');
-}
-
-/**
- * Returns true if the given mode name is enabled, false otherwise.
- *
- * @param {String} name
- * @return {Boolean}
- * @api public
- */
-
-function enabled(name) {
-  if (name[name.length - 1] === '*') {
-    return true;
-  }
-  var i, len;
-  for (i = 0, len = exports.skips.length; i < len; i++) {
-    if (exports.skips[i].test(name)) {
-      return false;
-    }
-  }
-  for (i = 0, len = exports.names.length; i < len; i++) {
-    if (exports.names[i].test(name)) {
-      return true;
-    }
-  }
-  return false;
-}
-
-/**
- * Coerce `val`.
- *
- * @param {Mixed} val
- * @return {Mixed}
- * @api private
- */
-
-function coerce(val) {
-  if (val instanceof Error) return val.stack || val.message;
-  return val;
-}
-
-},{"ms":80}],60:[function(require,module,exports){
+},{"debug":68}],58:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -7288,7 +6894,7 @@ function array(obj, fn, ctx) {
   }
 }
 
-},{"component-type":61,"to-function":102,"type":61}],61:[function(require,module,exports){
+},{"component-type":59,"to-function":100,"type":59}],59:[function(require,module,exports){
 
 /**
  * toString ref.
@@ -7322,7 +6928,7 @@ module.exports = function(val){
   return typeof val;
 };
 
-},{}],62:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -7487,7 +7093,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],63:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
 var bind = window.addEventListener ? 'addEventListener' : 'attachEvent',
     unbind = window.removeEventListener ? 'removeEventListener' : 'detachEvent',
     prefix = bind !== 'addEventListener' ? 'on' : '';
@@ -7523,7 +7129,7 @@ exports.unbind = function(el, type, fn, capture){
   el[unbind](prefix + type, fn, capture || false);
   return fn;
 };
-},{}],64:[function(require,module,exports){
+},{}],62:[function(require,module,exports){
 /**
  * Global Names
  */
@@ -7610,7 +7216,7 @@ function prefixed(str) {
   };
 }
 
-},{}],65:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -7623,7 +7229,7 @@ var pattern = /(\w+)\[(\d+)\]/
 
 /**
  * Safely encode the given string
- *
+ * 
  * @param {String} str
  * @return {String}
  * @api private
@@ -7639,7 +7245,7 @@ var encode = function(str) {
 
 /**
  * Safely decode the string
- *
+ * 
  * @param {String} str
  * @return {String}
  * @api private
@@ -7717,7 +7323,7 @@ exports.stringify = function(obj){
   return pairs.join('&');
 };
 
-},{"trim":106,"type":66}],66:[function(require,module,exports){
+},{"trim":104,"type":64}],64:[function(require,module,exports){
 /**
  * toString ref.
  */
@@ -7753,7 +7359,7 @@ module.exports = function(val){
   return typeof val;
 };
 
-},{}],67:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 /**
  * toString ref.
  */
@@ -7801,7 +7407,7 @@ function isBuffer(obj) {
     ))
 }
 
-},{}],68:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 
 /**
  * Parse the given `url`.
@@ -7885,7 +7491,7 @@ function port (protocol){
   }
 }
 
-},{}],69:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 /*
  * Date Format 1.2.3
  * (c) 2007-2009 Steven Levithan <stevenlevithan.com>
@@ -7907,28 +7513,28 @@ function port (protocol){
       var token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[LloSZWN]|'[^']*'|'[^']*'/g;
       var timezone = /\b(?:[PMCEA][SDP]T|(?:Pacific|Mountain|Central|Eastern|Atlantic) (?:Standard|Daylight|Prevailing) Time|(?:GMT|UTC)(?:[-+]\d{4})?)\b/g;
       var timezoneClip = /[^-+\dA-Z]/g;
-
+  
       // Regexes and supporting functions are cached through closure
       return function (date, mask, utc, gmt) {
-
+  
         // You can't provide utc if you skip other args (use the 'UTC:' mask prefix)
         if (arguments.length === 1 && kindOf(date) === 'string' && !/\d/.test(date)) {
           mask = date;
           date = undefined;
         }
-
+  
         date = date || new Date;
-
+  
         if(!(date instanceof Date)) {
           date = new Date(date);
         }
-
+  
         if (isNaN(date)) {
           throw TypeError('Invalid date');
         }
-
+  
         mask = String(dateFormat.masks[mask] || mask || dateFormat.masks['default']);
-
+  
         // Allow setting the utc/gmt argument via the mask
         var maskSlice = mask.slice(0, 4);
         if (maskSlice === 'UTC:' || maskSlice === 'GMT:') {
@@ -7938,7 +7544,7 @@ function port (protocol){
             gmt = true;
           }
         }
-
+  
         var _ = utc ? 'getUTC' : 'get';
         var d = date[_ + 'Date']();
         var D = date[_ + 'Day']();
@@ -7982,7 +7588,7 @@ function port (protocol){
           W:    W,
           N:    N
         };
-
+  
         return mask.replace(token, function (match) {
           if (match in flags) {
             return flags[match];
@@ -8062,7 +7668,7 @@ function getWeek(date) {
 /**
  * Get ISO-8601 numeric representation of the day of the week
  * 1 (for Monday) through 7 (for Sunday)
- *
+ * 
  * @param  {Object} `date`
  * @return {Number}
  */
@@ -8113,7 +7719,7 @@ function kindOf(val) {
   }
 })(this);
 
-},{}],70:[function(require,module,exports){
+},{}],68:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -8302,7 +7908,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":71,"_process":86}],71:[function(require,module,exports){
+},{"./debug":69,"_process":84}],69:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -8506,7 +8112,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":80}],72:[function(require,module,exports){
+},{"ms":78}],70:[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -8540,7 +8146,7 @@ function when(condition, fn, interval) {
 
 module.exports = when;
 
-},{"next-tick":84}],73:[function(require,module,exports){
+},{"next-tick":82}],71:[function(require,module,exports){
 
 /**
  * Expose `parse`.
@@ -8654,7 +8260,7 @@ function parse(html, doc) {
   return fragment;
 }
 
-},{}],74:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -8691,7 +8297,7 @@ function generate (name, options) {
   };
 }
 
-},{"debug":70}],75:[function(require,module,exports){
+},{"debug":68}],73:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -8716,12 +8322,12 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],76:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
 
 module.exports = function isEmail (string) {
     return (/.+\@.+\..+/).test(string);
 };
-},{}],77:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 /* globals window, HTMLElement */
 
 'use strict';
@@ -9523,7 +9129,7 @@ is.symbol = function (value) {
 
 module.exports = is;
 
-},{}],78:[function(require,module,exports){
+},{}],76:[function(require,module,exports){
 (function (global){
 /*! JSON v3.3.2 | http://bestiejs.github.io/json3 | Copyright 2012-2014, Kit Cambridge | http://kit.mit-license.org */
 ;(function () {
@@ -10429,7 +10035,7 @@ module.exports = is;
 }).call(this);
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],79:[function(require,module,exports){
+},{}],77:[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -10491,7 +10097,7 @@ module.exports = function loadIframe(options, fn){
   return iframe;
 };
 
-},{"is":77,"next-tick":84,"script-onload":88}],80:[function(require,module,exports){
+},{"is":75,"next-tick":82,"script-onload":86}],78:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -10645,7 +10251,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],81:[function(require,module,exports){
+},{}],79:[function(require,module,exports){
 'use strict';
 
 var is = require('is');
@@ -10690,7 +10296,7 @@ function toMs(num) {
   return num;
 }
 
-},{"./milliseconds":82,"./seconds":83,"@segment/isodate":49,"is":77}],82:[function(require,module,exports){
+},{"./milliseconds":80,"./seconds":81,"@segment/isodate":49,"is":75}],80:[function(require,module,exports){
 'use strict';
 
 /**
@@ -10722,7 +10328,7 @@ exports.parse = function(millis) {
   return new Date(millis);
 };
 
-},{}],83:[function(require,module,exports){
+},{}],81:[function(require,module,exports){
 'use strict';
 
 /**
@@ -10754,7 +10360,7 @@ exports.parse = function(seconds) {
   return new Date(millis);
 };
 
-},{}],84:[function(require,module,exports){
+},{}],82:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -10822,7 +10428,7 @@ module.exports = (function () {
 }());
 
 }).call(this,require('_process'))
-},{"_process":86}],85:[function(require,module,exports){
+},{"_process":84}],83:[function(require,module,exports){
 
 var identity = function(_){ return _; };
 
@@ -10976,7 +10582,7 @@ function isFunction(val) {
   return typeof val === 'function';
 }
 
-},{}],86:[function(require,module,exports){
+},{}],84:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -11162,7 +10768,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],87:[function(require,module,exports){
+},{}],85:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -11265,7 +10871,7 @@ function compact(value){
   return null == value;
 }
 
-},{"type-component":107}],88:[function(require,module,exports){
+},{"type-component":105}],86:[function(require,module,exports){
 
 // https://github.com/thirdpartyjs/thirdpartyjs-code/blob/master/examples/templates/02/loading-files/index.html
 
@@ -11320,7 +10926,7 @@ function attach(el, fn){
   });
 }
 
-},{}],89:[function(require,module,exports){
+},{}],87:[function(require,module,exports){
 'use strict';
 
 /**
@@ -11359,7 +10965,7 @@ module.exports = function(proto) {
   }
 };
 
-},{"obj-case":85}],90:[function(require,module,exports){
+},{"obj-case":83}],88:[function(require,module,exports){
 'use strict';
 
 /**
@@ -11430,7 +11036,7 @@ Alias.prototype.to = Alias.prototype.userId;
 
 module.exports = Alias;
 
-},{"./facade":91,"./utils":99}],91:[function(require,module,exports){
+},{"./facade":89,"./utils":97}],89:[function(require,module,exports){
 'use strict';
 
 var address = require('./address');
@@ -11744,7 +11350,7 @@ function transform(obj) {
 
 module.exports = Facade;
 
-},{"./address":89,"./is-enabled":95,"./utils":99,"@segment/isodate-traverse":48,"new-date":81,"obj-case":85}],92:[function(require,module,exports){
+},{"./address":87,"./is-enabled":93,"./utils":97,"@segment/isodate-traverse":48,"new-date":79,"obj-case":83}],90:[function(require,module,exports){
 'use strict';
 
 /**
@@ -11865,7 +11471,7 @@ Group.prototype.properties = function() {
 
 module.exports = Group;
 
-},{"./facade":91,"./utils":99,"is-email":76,"new-date":81}],93:[function(require,module,exports){
+},{"./facade":89,"./utils":97,"is-email":74,"new-date":79}],91:[function(require,module,exports){
 'use strict';
 
 var Facade = require('./facade');
@@ -12119,7 +11725,7 @@ Identify.prototype.birthday = Facade.proxy('traits.birthday');
 
 module.exports = Identify;
 
-},{"./facade":91,"./utils":99,"is-email":76,"new-date":81,"obj-case":85,"trim":106}],94:[function(require,module,exports){
+},{"./facade":89,"./utils":97,"is-email":74,"new-date":79,"obj-case":83,"trim":104}],92:[function(require,module,exports){
 'use strict';
 
 var Facade = require('./facade');
@@ -12141,7 +11747,7 @@ Facade.Screen = require('./screen');
 
 module.exports = Facade;
 
-},{"./alias":90,"./facade":91,"./group":92,"./identify":93,"./page":96,"./screen":97,"./track":98}],95:[function(require,module,exports){
+},{"./alias":88,"./facade":89,"./group":90,"./identify":91,"./page":94,"./screen":95,"./track":96}],93:[function(require,module,exports){
 'use strict';
 
 /**
@@ -12164,7 +11770,7 @@ module.exports = function(integration) {
   return !disabled[integration];
 };
 
-},{}],96:[function(require,module,exports){
+},{}],94:[function(require,module,exports){
 'use strict';
 
 var inherit = require('./utils').inherit;
@@ -12313,7 +11919,7 @@ Page.prototype.track = function(name) {
 
 module.exports = Page;
 
-},{"./facade":91,"./track":98,"./utils":99,"is-email":76}],97:[function(require,module,exports){
+},{"./facade":89,"./track":96,"./utils":97,"is-email":74}],95:[function(require,module,exports){
 'use strict';
 
 var inherit = require('./utils').inherit;
@@ -12385,7 +11991,7 @@ Screen.prototype.track = function(name) {
 
 module.exports = Screen;
 
-},{"./page":96,"./track":98,"./utils":99}],98:[function(require,module,exports){
+},{"./page":94,"./track":96,"./utils":97}],96:[function(require,module,exports){
 'use strict';
 
 var inherit = require('./utils').inherit;
@@ -12712,14 +12318,14 @@ function currency(val) {
 
 module.exports = Track;
 
-},{"./facade":91,"./identify":93,"./utils":99,"is-email":76,"obj-case":85}],99:[function(require,module,exports){
+},{"./facade":89,"./identify":91,"./utils":97,"is-email":74,"obj-case":83}],97:[function(require,module,exports){
 'use strict';
 
 exports.inherit = require('inherits');
 exports.clone = require('@ndhoule/clone');
 exports.type = require('type-component');
 
-},{"@ndhoule/clone":5,"inherits":75,"type-component":107}],100:[function(require,module,exports){
+},{"@ndhoule/clone":5,"inherits":73,"type-component":105}],98:[function(require,module,exports){
 
 /**
  * Generate a slug from the given `str`.
@@ -12744,7 +12350,7 @@ module.exports = function (str, options) {
     .replace(/ +/g, options.separator || '-')
 };
 
-},{}],101:[function(require,module,exports){
+},{}],99:[function(require,module,exports){
 
 var space = require('to-space-case')
 
@@ -12767,7 +12373,7 @@ function toCamelCase(string) {
   })
 }
 
-},{"to-space-case":104}],102:[function(require,module,exports){
+},{"to-space-case":102}],100:[function(require,module,exports){
 
 /**
  * Module Dependencies
@@ -12921,7 +12527,7 @@ function stripNested (prop, str, val) {
   });
 }
 
-},{"component-props":64,"props":64}],103:[function(require,module,exports){
+},{"component-props":62,"props":62}],101:[function(require,module,exports){
 
 /**
  * Expose `toNoCase`.
@@ -12993,7 +12599,7 @@ function uncamelize (string) {
     return previous + ' ' + uppers.toLowerCase().split('').join(' ');
   });
 }
-},{}],104:[function(require,module,exports){
+},{}],102:[function(require,module,exports){
 
 var clean = require('to-no-case')
 
@@ -13016,7 +12622,7 @@ function toSpaceCase(string) {
   }).trim()
 }
 
-},{"to-no-case":105}],105:[function(require,module,exports){
+},{"to-no-case":103}],103:[function(require,module,exports){
 
 /**
  * Export.
@@ -13085,7 +12691,7 @@ function uncamelize(string) {
   })
 }
 
-},{}],106:[function(require,module,exports){
+},{}],104:[function(require,module,exports){
 
 exports = module.exports = trim;
 
@@ -13101,7 +12707,7 @@ exports.right = function(str){
   return str.replace(/\s*$/, '');
 };
 
-},{}],107:[function(require,module,exports){
+},{}],105:[function(require,module,exports){
 
 /**
  * toString ref.
@@ -13133,7 +12739,7 @@ module.exports = function(val){
   return typeof val;
 };
 
-},{}],108:[function(require,module,exports){
+},{}],106:[function(require,module,exports){
 
 /**
  * Protocol.
@@ -13171,7 +12777,7 @@ function check () {
     location.protocol == 'chrome-extension:'
   );
 }
-},{}],109:[function(require,module,exports){
+},{}],107:[function(require,module,exports){
 (function (global){
 
 var rng;
@@ -13207,7 +12813,7 @@ module.exports = rng;
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],110:[function(require,module,exports){
+},{}],108:[function(require,module,exports){
 //     uuid.js
 //
 //     Copyright (c) 2010-2012 Robert Kieffer
@@ -13392,7 +12998,7 @@ uuid.unparse = unparse;
 
 module.exports = uuid;
 
-},{"./rng":109}],111:[function(require,module,exports){
+},{"./rng":107}],109:[function(require,module,exports){
 module.exports={
   "name": "@segment/analytics.js",
   "author": "Segment <friends@segment.com>",
@@ -13521,7 +13127,14 @@ module.exports={
     "eslint": "^2.9.0",
     "eslint-plugin-mocha": "^2.2.0",
     "eslint-plugin-require-path-exists": "^1.1.5",
+    "standard": "^8.6.0",
     "uglify-js": "^2.6.4"
+  },
+  "standard": {
+    "ignore": [
+      "analytics.js",
+      "analytics.min.js"
+    ]
   }
 }
 

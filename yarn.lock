@@ -266,8 +266,8 @@
     segmentio-facade "^3.0.2"
 
 "@segment/analytics.js-integration-comscore@git+https://github.com/segment-integrations/analytics.js-integration-comscore.git":
-  version "2.0.1"
-  resolved "git+https://github.com/segment-integrations/analytics.js-integration-comscore.git#24cce7ff8a176e8f709699abb13dec09ce02e3e8"
+  version "2.0.4"
+  resolved "git+https://github.com/segment-integrations/analytics.js-integration-comscore.git#ab29973906245d0eba127455838c58a46e7e0fd6"
   dependencies:
     "@segment/analytics.js-integration" "^2.1.0"
     use-https "^0.1.1"
