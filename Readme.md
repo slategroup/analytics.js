@@ -21,7 +21,8 @@ This will create a new copy of analytics.js and analytics.min.js
 1. Look at the package.json file. This should list almost all of the integrations available, you can
 find more at [https://github.com/segment-integrations/](https://github.com/segment-integrations/)
 2. Add the new integration to lib/integrations.js
-3. Update your code wherever you actually run your `analytics.initialize` to include the new integration and its options (see the lib/index.js of the integration on github)
+3. Run the make file (see above)
+4. Update your code wherever you actually run your `analytics.initialize` to include the new integration and its options (see the lib/index.js of the integration on github)
 
 
 ## Documentation
