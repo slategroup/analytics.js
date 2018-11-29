@@ -35,7 +35,7 @@ Object.keys(Integrations).forEach(function(name) {
   analytics.use(Integrations[name]);
 });
 
-},{"../package.json":109,"./integrations":2,"@segment/analytics.js-core":21}],2:[function(require,module,exports){
+},{"../package.json":112,"./integrations":2,"@segment/analytics.js-core":21}],2:[function(require,module,exports){
 /* eslint quote-props: 0 */
 'use strict'
 
@@ -52,7 +52,7 @@ module.exports = {
   'quantcast': require('@segment/analytics.js-integration-quantcast')
 };
 
-},{"@segment/analytics.js-integration-amplitude":29,"@segment/analytics.js-integration-comscore":34,"@segment/analytics.js-integration-facebook-pixel":39,"@segment/analytics.js-integration-parsely":40,"@segment/analytics.js-integration-quantcast":41}],3:[function(require,module,exports){
+},{"@segment/analytics.js-integration-amplitude":29,"@segment/analytics.js-integration-comscore":37,"@segment/analytics.js-integration-facebook-pixel":42,"@segment/analytics.js-integration-parsely":43,"@segment/analytics.js-integration-quantcast":44}],3:[function(require,module,exports){
 'use strict';
 
 /*
@@ -344,7 +344,7 @@ var clone = function clone(obj) {
 
 module.exports = clone;
 
-},{"component-type":65}],6:[function(require,module,exports){
+},{"component-type":68}],6:[function(require,module,exports){
 'use strict';
 
 /*
@@ -1932,7 +1932,7 @@ module.exports.memory = memory;
 module.exports.store = store;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./cookie":18,"./group":20,"./memory":22,"./normalize":23,"./pageDefaults":24,"./store":25,"./user":26,"@ndhoule/after":3,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/each":8,"@ndhoule/foldl":11,"@ndhoule/keys":13,"@ndhoule/pick":15,"@segment/is-meta":47,"@segment/prevent-default":51,"bind-all":55,"component-emitter":60,"component-event":61,"component-querystring":63,"component-type":65,"debug":27,"is":75,"next-tick":82,"segmentio-facade":92}],18:[function(require,module,exports){
+},{"./cookie":18,"./group":20,"./memory":22,"./normalize":23,"./pageDefaults":24,"./store":25,"./user":26,"@ndhoule/after":3,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/each":8,"@ndhoule/foldl":11,"@ndhoule/keys":13,"@ndhoule/pick":15,"@segment/is-meta":50,"@segment/prevent-default":54,"bind-all":58,"component-emitter":63,"component-event":64,"component-querystring":66,"component-type":68,"debug":27,"is":78,"next-tick":85,"segmentio-facade":95}],18:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2066,7 +2066,7 @@ module.exports = bindAll(new Cookie());
 
 module.exports.Cookie = Cookie;
 
-},{"@ndhoule/clone":5,"@ndhoule/defaults":6,"@segment/top-domain":53,"bind-all":55,"component-cookie":57,"debug":27,"json3":76}],19:[function(require,module,exports){
+},{"@ndhoule/clone":5,"@ndhoule/defaults":6,"@segment/top-domain":56,"bind-all":58,"component-cookie":60,"debug":27,"json3":79}],19:[function(require,module,exports){
 'use strict';
 
 /*
@@ -2309,7 +2309,7 @@ Entity.prototype.load = function() {
 };
 
 
-},{"./cookie":18,"./memory":22,"./store":25,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"@segment/isodate-traverse":48,"debug":27}],20:[function(require,module,exports){
+},{"./cookie":18,"./memory":22,"./store":25,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"@segment/isodate-traverse":51,"debug":27}],20:[function(require,module,exports){
 'use strict';
 
 /*
@@ -2369,7 +2369,7 @@ module.exports = bindAll(new Group());
 
 module.exports.Group = Group;
 
-},{"./entity":19,"bind-all":55,"debug":27,"inherits":73}],21:[function(require,module,exports){
+},{"./entity":19,"bind-all":58,"debug":27,"inherits":76}],21:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2462,7 +2462,7 @@ Memory.prototype.remove = function(key) {
   return true;
 };
 
-},{"@ndhoule/clone":5,"bind-all":55}],23:[function(require,module,exports){
+},{"@ndhoule/clone":5,"bind-all":58}],23:[function(require,module,exports){
 'use strict';
 
 /**
@@ -2555,7 +2555,7 @@ function normalize(msg, list) {
   }
 }
 
-},{"@ndhoule/defaults":6,"@ndhoule/each":8,"@ndhoule/includes":12,"@ndhoule/map":14,"component-type":65,"debug":27}],24:[function(require,module,exports){
+},{"@ndhoule/defaults":6,"@ndhoule/each":8,"@ndhoule/includes":12,"@ndhoule/map":14,"component-type":68,"debug":27}],24:[function(require,module,exports){
 'use strict';
 
 /*
@@ -2619,7 +2619,7 @@ function canonicalUrl(search) {
 
 module.exports = pageDefaults;
 
-},{"@ndhoule/includes":12,"@segment/canonical":45,"component-url":66}],25:[function(require,module,exports){
+},{"@ndhoule/includes":12,"@segment/canonical":48,"component-url":69}],25:[function(require,module,exports){
 'use strict';
 
 /*
@@ -2709,7 +2709,7 @@ module.exports = bindAll(new Store());
 
 module.exports.Store = Store;
 
-},{"@ndhoule/defaults":6,"@segment/store":52,"bind-all":55}],26:[function(require,module,exports){
+},{"@ndhoule/defaults":6,"@segment/store":55,"bind-all":58}],26:[function(require,module,exports){
 'use strict';
 
 /*
@@ -2887,7 +2887,7 @@ module.exports = bindAll(new User());
 
 module.exports.User = User;
 
-},{"./cookie":18,"./entity":19,"bind-all":55,"component-cookie":57,"debug":27,"inherits":73,"uuid":108}],27:[function(require,module,exports){
+},{"./cookie":18,"./entity":19,"bind-all":58,"component-cookie":60,"debug":27,"inherits":76,"uuid":111}],27:[function(require,module,exports){
 
 /**
  * Expose `debug()` as the module.
@@ -3140,7 +3140,7 @@ var umd = typeof window.define === 'function' && window.define.amd;
  * Source.
  */
 
-var src = '//d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.7.0-min.gz.js';
+var src = '//d24n15hnbwhuhn.cloudfront.net/libs/amplitude-4.1.1-min.gz.js';
 
 /**
  * Expose `Amplitude` integration.
@@ -3164,6 +3164,7 @@ var Amplitude = module.exports = integration('Amplitude')
   .option('deviceIdFromUrlParam', false)
   .option('mapQueryParams', {})
   .option('trackRevenuePerProduct', false)
+  .option('preferAnonymousIdForDeviceId', false)
   .tag('<script src="' + src + '">');
 
 /**
@@ -3234,6 +3235,8 @@ Amplitude.prototype.loaded = function() {
  */
 
 Amplitude.prototype.page = function(page) {
+  this.setDeviceIdFromAnonymousId(page);
+
   var category = page.category();
   var name = page.fullName();
   var opts = this.options;
@@ -3262,6 +3265,8 @@ Amplitude.prototype.page = function(page) {
  */
 
 Amplitude.prototype.identify = function(identify) {
+  this.setDeviceIdFromAnonymousId(identify);
+
   var id = identify.userId();
   var traits = identify.traits();
   if (id) window.amplitude.setUserId(id);
@@ -3299,6 +3304,8 @@ Amplitude.prototype.identify = function(identify) {
 Amplitude.prototype.track = logEvent;
 
 function logEvent(track, dontSetRevenue) {
+  this.setDeviceIdFromAnonymousId(track);
+
   var props = track.properties();
   var options = track.options(this.name);
   var event = track.event();
@@ -3333,6 +3340,8 @@ function logEvent(track, dontSetRevenue) {
 }
 
 Amplitude.prototype.orderCompleted = function(track) {
+  this.setDeviceIdFromAnonymousId(track);
+
   var products = track.products();
   var clonedTrack = track.json();
   var trackRevenuePerProduct = this.options.trackRevenuePerProduct;
@@ -3373,8 +3382,18 @@ Amplitude.prototype.orderCompleted = function(track) {
  */
 
 Amplitude.prototype.group = function(group) {
-  var groupId = group.groupId();
-  if (groupId) window.amplitude.setGroup('[Segment] Group', groupId);
+  this.setDeviceIdFromAnonymousId(group);
+
+  var groupType = group.traits()[this.options.groupTypeTrait];
+  var groupValue = group.traits()[this.options.groupValueTrait];
+  if (groupType && groupValue) {
+    window.amplitude.setGroup(groupType, groupValue);
+  } else {
+    var groupId = group.groupId();
+    if (groupId) {
+      window.amplitude.setGroup('[Segment] Group', groupId);
+    }
+  }
 };
 
 /**
@@ -3390,6 +3409,22 @@ Amplitude.prototype.setDomain = function(href) {
 };
 
 /**
+ * If enabled by settings, set the device ID from the Segment anonymous ID.
+ *
+ * This logic cannot be performed at initialization time, because customers may
+ * want to modify anonymous IDs between initializing Segment and sending their
+ * first event.
+ *
+ * @api private
+ * @param {Fadade} facade to get anonymousId from.
+ */
+Amplitude.prototype.setDeviceIdFromAnonymousId = function(facade) {
+  if (this.options.preferAnonymousIdForDeviceId) {
+    this.setDeviceId(facade.anonymousId());
+  }
+};
+
+/**
  * Override device ID in Amplitude.
  *
  * @api private
@@ -3399,7 +3434,6 @@ Amplitude.prototype.setDomain = function(href) {
 Amplitude.prototype.setDeviceId = function(deviceId) {
   if (deviceId) window.amplitude.setDeviceId(deviceId);
 };
-
 
 Amplitude.prototype.setRevenue = function(properties) {
   var price = properties.price;
@@ -3451,7 +3485,7 @@ function mapRevenueAttributes(track) {
   };
 }
 
-},{"@ndhoule/each":8,"@segment/analytics.js-integration":30,"@segment/top-domain":53,"component-bind":56,"do-when":70,"is":75,"segmentio-facade":92}],30:[function(require,module,exports){
+},{"@ndhoule/each":8,"@segment/analytics.js-integration":30,"@segment/top-domain":35,"component-bind":59,"do-when":73,"is":78,"segmentio-facade":95}],30:[function(require,module,exports){
 'use strict';
 
 /**
@@ -3516,7 +3550,7 @@ function createIntegration(name) {
 
 module.exports = createIntegration;
 
-},{"./protos":31,"./statics":32,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":56,"debug":68,"slug-component":98}],31:[function(require,module,exports){
+},{"./protos":31,"./statics":32,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":59,"debug":71,"slug-component":101}],31:[function(require,module,exports){
 'use strict';
 
 /**
@@ -3999,7 +4033,7 @@ function render(template, locals) {
   }, {}, template.attrs);
 }
 
-},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":46,"@segment/load-script":50,"analytics-events":33,"component-emitter":60,"is":75,"load-iframe":77,"next-tick":82,"to-no-case":101}],32:[function(require,module,exports){
+},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":33,"@segment/load-script":34,"analytics-events":36,"component-emitter":63,"is":78,"load-iframe":80,"next-tick":85,"to-no-case":104}],32:[function(require,module,exports){
 'use strict';
 
 /**
@@ -4164,7 +4198,214 @@ function objectify(str) {
   };
 }
 
-},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":60,"domify":71}],33:[function(require,module,exports){
+},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":63,"domify":74}],33:[function(require,module,exports){
+(function (global){
+'use strict';
+
+// Stringifier
+var toString = global.JSON && typeof JSON.stringify === 'function' ? JSON.stringify : String;
+
+/**
+ * Format the given `str`.
+ *
+ * @param {string} str
+ * @param {...*} [args]
+ * @return {string}
+ */
+function fmt(str) {
+  var args = Array.prototype.slice.call(arguments, 1);
+  var j = 0;
+
+  return str.replace(/%([a-z])/gi, function(match, f) {
+    return fmt[f] ? fmt[f](args[j++]) : match + f;
+  });
+}
+
+// Formatters
+fmt.o = toString;
+fmt.s = String;
+fmt.d = parseInt;
+
+/*
+ * Exports.
+ */
+
+module.exports = fmt;
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],34:[function(require,module,exports){
+'use strict';
+
+/*
+ * Module dependencies.
+ */
+
+var onload = require('script-onload');
+var tick = require('next-tick');
+var type = require('component-type');
+
+/**
+ * Loads a script asynchronously.
+ *
+ * @param {Object} options
+ * @param {Function} cb
+ */
+function loadScript(options, cb) {
+  if (!options) {
+    throw new Error('Can\'t load nothing...');
+  }
+
+  // Allow for the simplest case, just passing a `src` string.
+  if (type(options) === 'string') {
+    options = { src : options };
+  }
+
+  var https = document.location.protocol === 'https:' || document.location.protocol === 'chrome-extension:';
+
+  // If you use protocol relative URLs, third-party scripts like Google
+  // Analytics break when testing with `file:` so this fixes that.
+  if (options.src && options.src.indexOf('//') === 0) {
+    options.src = (https ? 'https:' : 'http:') + options.src;
+  }
+
+  // Allow them to pass in different URLs depending on the protocol.
+  if (https && options.https) {
+    options.src = options.https;
+  } else if (!https && options.http) {
+    options.src = options.http;
+  }
+
+  // Make the `<script>` element and insert it before the first script on the
+  // page, which is guaranteed to exist since this Javascript is running.
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.async = true;
+  script.src = options.src;
+
+  // If we have a cb, attach event handlers. Does not work on < IE9 because
+  // older browser versions don't register element.onerror
+  if (type(cb) === 'function') {
+    onload(script, cb);
+  }
+
+  tick(function() {
+    // Append after event listeners are attached for IE.
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(script, firstScript);
+  });
+
+  // Return the script element in case they want to do anything special, like
+  // give it an ID or attributes.
+  return script;
+}
+
+/*
+ * Exports.
+ */
+
+module.exports = loadScript;
+
+},{"component-type":68,"next-tick":85,"script-onload":89}],35:[function(require,module,exports){
+'use strict';
+
+/**
+ * Module dependencies.
+ */
+
+var parse = require('component-url').parse;
+var cookie = require('component-cookie');
+
+/**
+ * Get the top domain.
+ *
+ * The function constructs the levels of domain and attempts to set a global
+ * cookie on each one when it succeeds it returns the top level domain.
+ *
+ * The method returns an empty string when the hostname is an ip or `localhost`.
+ *
+ * Example levels:
+ *
+ *      domain.levels('http://www.google.co.uk');
+ *      // => ["co.uk", "google.co.uk", "www.google.co.uk"]
+ *
+ * Example:
+ *
+ *      domain('http://localhost:3000/baz');
+ *      // => ''
+ *      domain('http://dev:3000/baz');
+ *      // => ''
+ *      domain('http://127.0.0.1:3000/baz');
+ *      // => ''
+ *      domain('http://segment.io/baz');
+ *      // => 'segment.io'
+ *
+ * @param {string} url
+ * @return {string}
+ * @api public
+ */
+function domain(url) {
+  var cookie = exports.cookie;
+  var levels = exports.levels(url);
+
+  // Lookup the real top level one.
+  for (var i = 0; i < levels.length; ++i) {
+    var cname = '__tld__';
+    var domain = levels[i];
+    var opts = { domain: '.' + domain };
+
+    cookie(cname, 1, opts);
+    if (cookie(cname)) {
+      cookie(cname, null, opts);
+      return domain;
+    }
+  }
+
+  return '';
+}
+
+/**
+ * Levels returns all levels of the given url.
+ *
+ * @param {string} url
+ * @return {Array}
+ * @api public
+ */
+domain.levels = function(url) {
+  var host = parse(url).hostname;
+  var parts = host.split('.');
+  var last = parts[parts.length - 1];
+  var levels = [];
+
+  // Ip address.
+  if (parts.length === 4 && last === parseInt(last, 10)) {
+    return levels;
+  }
+
+  // Localhost.
+  if (parts.length <= 1) {
+    return levels;
+  }
+
+  // Create levels.
+  for (var i = parts.length - 2; i >= 0; --i) {
+    levels.push(parts.slice(i).join('.'));
+  }
+
+  return levels;
+};
+
+/**
+ * Expose cookie on domain.
+ */
+domain.cookie = cookie;
+
+/*
+ * Exports.
+ */
+
+exports = module.exports = domain;
+
+},{"component-cookie":60,"component-url":69}],36:[function(require,module,exports){
 
 module.exports = {
   // Promotions
@@ -4231,7 +4472,7 @@ module.exports = {
   pushNotificationBounced: /^[ _]?push[ _]?notification[ _]?bounced[ _]?$/i
 };
 
-},{}],34:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 'use strict';
 
 /**
@@ -4324,15 +4565,15 @@ Comscore.prototype.mapComscoreParams = function(page) {
   return comScoreParams;
 };
 
-},{"@segment/analytics.js-integration":35,"use-https":106}],35:[function(require,module,exports){
+},{"@segment/analytics.js-integration":38,"use-https":109}],38:[function(require,module,exports){
 arguments[4][30][0].apply(exports,arguments)
-},{"./protos":36,"./statics":37,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":56,"debug":68,"dup":30,"slug-component":98}],36:[function(require,module,exports){
+},{"./protos":39,"./statics":40,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":59,"debug":71,"dup":30,"slug-component":101}],39:[function(require,module,exports){
 arguments[4][31][0].apply(exports,arguments)
-},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":46,"@segment/load-script":50,"analytics-events":38,"component-emitter":60,"dup":31,"is":75,"load-iframe":77,"next-tick":82,"to-no-case":101}],37:[function(require,module,exports){
+},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":49,"@segment/load-script":53,"analytics-events":41,"component-emitter":63,"dup":31,"is":78,"load-iframe":80,"next-tick":85,"to-no-case":104}],40:[function(require,module,exports){
 arguments[4][32][0].apply(exports,arguments)
-},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":60,"domify":71,"dup":32}],38:[function(require,module,exports){
-arguments[4][33][0].apply(exports,arguments)
-},{"dup":33}],39:[function(require,module,exports){
+},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":63,"domify":74,"dup":32}],41:[function(require,module,exports){
+arguments[4][36][0].apply(exports,arguments)
+},{"dup":36}],42:[function(require,module,exports){
 'use strict';
 
 /**
@@ -4656,7 +4897,7 @@ function formatTraits(analytics) {
   });
 }
 
-},{"@ndhoule/each":8,"@ndhoule/foldl":11,"@segment/analytics.js-integration":42,"dateformat":67,"is":75,"reject":85,"segmentio-facade":92,"to-camel-case":99}],40:[function(require,module,exports){
+},{"@ndhoule/each":8,"@ndhoule/foldl":11,"@segment/analytics.js-integration":45,"dateformat":70,"is":78,"reject":88,"segmentio-facade":95,"to-camel-case":102}],43:[function(require,module,exports){
 'use strict';
 
 /**
@@ -4846,7 +5087,7 @@ Parsely.prototype.parseVideoMetadata = function(track) {
   });
 };
 
-},{"@ndhoule/defaults":6,"@segment/analytics.js-integration":42,"do-when":70,"is":75,"json3":76,"reject":85}],41:[function(require,module,exports){
+},{"@ndhoule/defaults":6,"@segment/analytics.js-integration":45,"do-when":73,"is":78,"json3":79,"reject":88}],44:[function(require,module,exports){
 'use strict';
 
 /**
@@ -5086,9 +5327,9 @@ function safe(str) {
   if (str) return str.replace(/[^\w\s]|_/gi, '');
 }
 
-},{"@segment/analytics.js-integration":42,"global-queue":72,"is":75,"use-https":106}],42:[function(require,module,exports){
+},{"@segment/analytics.js-integration":45,"global-queue":75,"is":78,"use-https":109}],45:[function(require,module,exports){
 arguments[4][30][0].apply(exports,arguments)
-},{"./protos":43,"./statics":44,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":56,"debug":68,"dup":30,"slug-component":98}],43:[function(require,module,exports){
+},{"./protos":46,"./statics":47,"@ndhoule/clone":5,"@ndhoule/defaults":6,"@ndhoule/extend":10,"component-bind":59,"debug":71,"dup":30,"slug-component":101}],46:[function(require,module,exports){
 'use strict';
 
 /**
@@ -5558,7 +5799,7 @@ function render(template, locals) {
   }, {}, template.attrs);
 }
 
-},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":46,"@segment/load-script":50,"analytics-events":54,"component-emitter":60,"is":75,"load-iframe":77,"next-tick":82,"to-no-case":101}],44:[function(require,module,exports){
+},{"@ndhoule/after":3,"@ndhoule/each":8,"@ndhoule/every":9,"@ndhoule/foldl":11,"@segment/fmt":49,"@segment/load-script":53,"analytics-events":57,"component-emitter":63,"is":78,"load-iframe":80,"next-tick":85,"to-no-case":104}],47:[function(require,module,exports){
 'use strict';
 
 /**
@@ -5723,7 +5964,7 @@ function objectify(str) {
   };
 }
 
-},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":60,"domify":71}],45:[function(require,module,exports){
+},{"@ndhoule/each":8,"@ndhoule/includes":12,"component-emitter":63,"domify":74}],48:[function(require,module,exports){
 'use strict';
 
 /**
@@ -5747,42 +5988,9 @@ function canonical() {
 
 module.exports = canonical;
 
-},{}],46:[function(require,module,exports){
-(function (global){
-'use strict';
-
-// Stringifier
-var toString = global.JSON && typeof JSON.stringify === 'function' ? JSON.stringify : String;
-
-/**
- * Format the given `str`.
- *
- * @param {string} str
- * @param {...*} [args]
- * @return {string}
- */
-function fmt(str) {
-  var args = Array.prototype.slice.call(arguments, 1);
-  var j = 0;
-
-  return str.replace(/%([a-z])/gi, function(match, f) {
-    return fmt[f] ? fmt[f](args[j++]) : match + f;
-  });
-}
-
-// Formatters
-fmt.o = toString;
-fmt.s = String;
-fmt.d = parseInt;
-
-/*
- * Exports.
- */
-
-module.exports = fmt;
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],47:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
+arguments[4][33][0].apply(exports,arguments)
+},{"dup":33}],50:[function(require,module,exports){
 'use strict';
 
 function isMeta(e) {
@@ -5810,7 +6018,7 @@ function isMeta(e) {
 
 module.exports = isMeta;
 
-},{}],48:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 'use strict';
 
 var type = require('component-type');
@@ -5887,7 +6095,7 @@ function array(arr, strict) {
   return arr;
 }
 
-},{"@segment/isodate":49,"component-each":58,"component-type":65}],49:[function(require,module,exports){
+},{"@segment/isodate":52,"component-each":61,"component-type":68}],52:[function(require,module,exports){
 'use strict';
 
 /**
@@ -5965,79 +6173,9 @@ exports.is = function(string, strict) {
   return matcher.test(string);
 };
 
-},{}],50:[function(require,module,exports){
-'use strict';
-
-/*
- * Module dependencies.
- */
-
-var onload = require('script-onload');
-var tick = require('next-tick');
-var type = require('component-type');
-
-/**
- * Loads a script asynchronously.
- *
- * @param {Object} options
- * @param {Function} cb
- */
-function loadScript(options, cb) {
-  if (!options) {
-    throw new Error('Can\'t load nothing...');
-  }
-
-  // Allow for the simplest case, just passing a `src` string.
-  if (type(options) === 'string') {
-    options = { src : options };
-  }
-
-  var https = document.location.protocol === 'https:' || document.location.protocol === 'chrome-extension:';
-
-  // If you use protocol relative URLs, third-party scripts like Google
-  // Analytics break when testing with `file:` so this fixes that.
-  if (options.src && options.src.indexOf('//') === 0) {
-    options.src = (https ? 'https:' : 'http:') + options.src;
-  }
-
-  // Allow them to pass in different URLs depending on the protocol.
-  if (https && options.https) {
-    options.src = options.https;
-  } else if (!https && options.http) {
-    options.src = options.http;
-  }
-
-  // Make the `<script>` element and insert it before the first script on the
-  // page, which is guaranteed to exist since this Javascript is running.
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.async = true;
-  script.src = options.src;
-
-  // If we have a cb, attach event handlers. Does not work on < IE9 because
-  // older browser versions don't register element.onerror
-  if (type(cb) === 'function') {
-    onload(script, cb);
-  }
-
-  tick(function() {
-    // Append after event listeners are attached for IE.
-    var firstScript = document.getElementsByTagName('script')[0];
-    firstScript.parentNode.insertBefore(script, firstScript);
-  });
-
-  // Return the script element in case they want to do anything special, like
-  // give it an ID or attributes.
-  return script;
-}
-
-/*
- * Exports.
- */
-
-module.exports = loadScript;
-
-},{"component-type":65,"next-tick":82,"script-onload":86}],51:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
+arguments[4][34][0].apply(exports,arguments)
+},{"component-type":68,"dup":34,"next-tick":85,"script-onload":89}],54:[function(require,module,exports){
 'use strict';
 
 /**
@@ -6062,7 +6200,7 @@ function preventDefault(e) {
 
 module.exports = preventDefault;
 
-},{}],52:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 (function (global){
 "use strict"
 
@@ -6235,107 +6373,9 @@ module.exports = (function() {
 }())
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"json3":76}],53:[function(require,module,exports){
-'use strict';
-
-/**
- * Module dependencies.
- */
-
-var parse = require('component-url').parse;
-var cookie = require('component-cookie');
-
-/**
- * Get the top domain.
- *
- * The function constructs the levels of domain and attempts to set a global
- * cookie on each one when it succeeds it returns the top level domain.
- *
- * The method returns an empty string when the hostname is an ip or `localhost`.
- *
- * Example levels:
- *
- *      domain.levels('http://www.google.co.uk');
- *      // => ["co.uk", "google.co.uk", "www.google.co.uk"]
- *
- * Example:
- *
- *      domain('http://localhost:3000/baz');
- *      // => ''
- *      domain('http://dev:3000/baz');
- *      // => ''
- *      domain('http://127.0.0.1:3000/baz');
- *      // => ''
- *      domain('http://segment.io/baz');
- *      // => 'segment.io'
- *
- * @param {string} url
- * @return {string}
- * @api public
- */
-function domain(url) {
-  var cookie = exports.cookie;
-  var levels = exports.levels(url);
-
-  // Lookup the real top level one.
-  for (var i = 0; i < levels.length; ++i) {
-    var cname = '__tld__';
-    var domain = levels[i];
-    var opts = { domain: '.' + domain };
-
-    cookie(cname, 1, opts);
-    if (cookie(cname)) {
-      cookie(cname, null, opts);
-      return domain;
-    }
-  }
-
-  return '';
-}
-
-/**
- * Levels returns all levels of the given url.
- *
- * @param {string} url
- * @return {Array}
- * @api public
- */
-domain.levels = function(url) {
-  var host = parse(url).hostname;
-  var parts = host.split('.');
-  var last = parts[parts.length - 1];
-  var levels = [];
-
-  // Ip address.
-  if (parts.length === 4 && last === parseInt(last, 10)) {
-    return levels;
-  }
-
-  // Localhost.
-  if (parts.length <= 1) {
-    return levels;
-  }
-
-  // Create levels.
-  for (var i = parts.length - 2; i >= 0; --i) {
-    levels.push(parts.slice(i).join('.'));
-  }
-
-  return levels;
-};
-
-/**
- * Expose cookie on domain.
- */
-domain.cookie = cookie;
-
-/*
- * Exports.
- */
-
-exports = module.exports = domain;
-
-},{"component-cookie":57,"component-url":66}],54:[function(require,module,exports){
+},{"json3":79}],56:[function(require,module,exports){
+arguments[4][35][0].apply(exports,arguments)
+},{"component-cookie":60,"component-url":69,"dup":35}],57:[function(require,module,exports){
 'use strict';
 
 /**
@@ -6627,7 +6667,7 @@ module.exports = foldl(function transform(ret, pairs, method) {
   return ret;
 }, {}, eventMap);
 
-},{"@ndhoule/foldl":11,"@ndhoule/map":14}],55:[function(require,module,exports){
+},{"@ndhoule/foldl":11,"@ndhoule/map":14}],58:[function(require,module,exports){
 'use strict';
 
 var bind = require('component-bind');
@@ -6645,7 +6685,7 @@ function bindAll(obj) {
 
 module.exports = bindAll;
 
-},{"component-bind":56}],56:[function(require,module,exports){
+},{"component-bind":59}],59:[function(require,module,exports){
 /**
  * Slice reference.
  */
@@ -6670,7 +6710,7 @@ module.exports = function(obj, fn){
   }
 };
 
-},{}],57:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -6803,7 +6843,7 @@ function decode(value) {
   }
 }
 
-},{"debug":68}],58:[function(require,module,exports){
+},{"debug":71}],61:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -6894,7 +6934,7 @@ function array(obj, fn, ctx) {
   }
 }
 
-},{"component-type":59,"to-function":100,"type":59}],59:[function(require,module,exports){
+},{"component-type":62,"to-function":103,"type":62}],62:[function(require,module,exports){
 
 /**
  * toString ref.
@@ -6928,7 +6968,7 @@ module.exports = function(val){
   return typeof val;
 };
 
-},{}],60:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -7093,7 +7133,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],61:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 var bind = window.addEventListener ? 'addEventListener' : 'attachEvent',
     unbind = window.removeEventListener ? 'removeEventListener' : 'detachEvent',
     prefix = bind !== 'addEventListener' ? 'on' : '';
@@ -7129,7 +7169,7 @@ exports.unbind = function(el, type, fn, capture){
   el[unbind](prefix + type, fn, capture || false);
   return fn;
 };
-},{}],62:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 /**
  * Global Names
  */
@@ -7216,7 +7256,7 @@ function prefixed(str) {
   };
 }
 
-},{}],63:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -7323,7 +7363,7 @@ exports.stringify = function(obj){
   return pairs.join('&');
 };
 
-},{"trim":104,"type":64}],64:[function(require,module,exports){
+},{"trim":107,"type":67}],67:[function(require,module,exports){
 /**
  * toString ref.
  */
@@ -7359,7 +7399,7 @@ module.exports = function(val){
   return typeof val;
 };
 
-},{}],65:[function(require,module,exports){
+},{}],68:[function(require,module,exports){
 /**
  * toString ref.
  */
@@ -7407,7 +7447,7 @@ function isBuffer(obj) {
     ))
 }
 
-},{}],66:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 
 /**
  * Parse the given `url`.
@@ -7491,7 +7531,7 @@ function port (protocol){
   }
 }
 
-},{}],67:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 /*
  * Date Format 1.2.3
  * (c) 2007-2009 Steven Levithan <stevenlevithan.com>
@@ -7719,7 +7759,7 @@ function kindOf(val) {
   }
 })(this);
 
-},{}],68:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -7908,7 +7948,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":69,"_process":84}],69:[function(require,module,exports){
+},{"./debug":72,"_process":87}],72:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -8112,7 +8152,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":78}],70:[function(require,module,exports){
+},{"ms":81}],73:[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -8146,7 +8186,7 @@ function when(condition, fn, interval) {
 
 module.exports = when;
 
-},{"next-tick":82}],71:[function(require,module,exports){
+},{"next-tick":85}],74:[function(require,module,exports){
 
 /**
  * Expose `parse`.
@@ -8260,7 +8300,7 @@ function parse(html, doc) {
   return fragment;
 }
 
-},{}],72:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -8297,7 +8337,7 @@ function generate (name, options) {
   };
 }
 
-},{"debug":68}],73:[function(require,module,exports){
+},{"debug":71}],76:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -8322,12 +8362,12 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],74:[function(require,module,exports){
+},{}],77:[function(require,module,exports){
 
 module.exports = function isEmail (string) {
     return (/.+\@.+\..+/).test(string);
 };
-},{}],75:[function(require,module,exports){
+},{}],78:[function(require,module,exports){
 /* globals window, HTMLElement */
 
 'use strict';
@@ -9129,7 +9169,7 @@ is.symbol = function (value) {
 
 module.exports = is;
 
-},{}],76:[function(require,module,exports){
+},{}],79:[function(require,module,exports){
 (function (global){
 /*! JSON v3.3.2 | http://bestiejs.github.io/json3 | Copyright 2012-2014, Kit Cambridge | http://kit.mit-license.org */
 ;(function () {
@@ -10035,7 +10075,7 @@ module.exports = is;
 }).call(this);
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],77:[function(require,module,exports){
+},{}],80:[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -10097,7 +10137,7 @@ module.exports = function loadIframe(options, fn){
   return iframe;
 };
 
-},{"is":75,"next-tick":82,"script-onload":86}],78:[function(require,module,exports){
+},{"is":78,"next-tick":85,"script-onload":89}],81:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -10251,7 +10291,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],79:[function(require,module,exports){
+},{}],82:[function(require,module,exports){
 'use strict';
 
 var is = require('is');
@@ -10296,7 +10336,7 @@ function toMs(num) {
   return num;
 }
 
-},{"./milliseconds":80,"./seconds":81,"@segment/isodate":49,"is":75}],80:[function(require,module,exports){
+},{"./milliseconds":83,"./seconds":84,"@segment/isodate":52,"is":78}],83:[function(require,module,exports){
 'use strict';
 
 /**
@@ -10328,7 +10368,7 @@ exports.parse = function(millis) {
   return new Date(millis);
 };
 
-},{}],81:[function(require,module,exports){
+},{}],84:[function(require,module,exports){
 'use strict';
 
 /**
@@ -10360,7 +10400,7 @@ exports.parse = function(seconds) {
   return new Date(millis);
 };
 
-},{}],82:[function(require,module,exports){
+},{}],85:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -10428,7 +10468,7 @@ module.exports = (function () {
 }());
 
 }).call(this,require('_process'))
-},{"_process":84}],83:[function(require,module,exports){
+},{"_process":87}],86:[function(require,module,exports){
 
 var identity = function(_){ return _; };
 
@@ -10582,7 +10622,7 @@ function isFunction(val) {
   return typeof val === 'function';
 }
 
-},{}],84:[function(require,module,exports){
+},{}],87:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -10768,7 +10808,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],85:[function(require,module,exports){
+},{}],88:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -10871,7 +10911,7 @@ function compact(value){
   return null == value;
 }
 
-},{"type-component":105}],86:[function(require,module,exports){
+},{"type-component":108}],89:[function(require,module,exports){
 
 // https://github.com/thirdpartyjs/thirdpartyjs-code/blob/master/examples/templates/02/loading-files/index.html
 
@@ -10926,7 +10966,7 @@ function attach(el, fn){
   });
 }
 
-},{}],87:[function(require,module,exports){
+},{}],90:[function(require,module,exports){
 'use strict';
 
 /**
@@ -10965,7 +11005,7 @@ module.exports = function(proto) {
   }
 };
 
-},{"obj-case":83}],88:[function(require,module,exports){
+},{"obj-case":86}],91:[function(require,module,exports){
 'use strict';
 
 /**
@@ -11036,7 +11076,7 @@ Alias.prototype.to = Alias.prototype.userId;
 
 module.exports = Alias;
 
-},{"./facade":89,"./utils":97}],89:[function(require,module,exports){
+},{"./facade":92,"./utils":100}],92:[function(require,module,exports){
 'use strict';
 
 var address = require('./address');
@@ -11350,7 +11390,7 @@ function transform(obj) {
 
 module.exports = Facade;
 
-},{"./address":87,"./is-enabled":93,"./utils":97,"@segment/isodate-traverse":48,"new-date":79,"obj-case":83}],90:[function(require,module,exports){
+},{"./address":90,"./is-enabled":96,"./utils":100,"@segment/isodate-traverse":51,"new-date":82,"obj-case":86}],93:[function(require,module,exports){
 'use strict';
 
 /**
@@ -11471,7 +11511,7 @@ Group.prototype.properties = function() {
 
 module.exports = Group;
 
-},{"./facade":89,"./utils":97,"is-email":74,"new-date":79}],91:[function(require,module,exports){
+},{"./facade":92,"./utils":100,"is-email":77,"new-date":82}],94:[function(require,module,exports){
 'use strict';
 
 var Facade = require('./facade');
@@ -11725,7 +11765,7 @@ Identify.prototype.birthday = Facade.proxy('traits.birthday');
 
 module.exports = Identify;
 
-},{"./facade":89,"./utils":97,"is-email":74,"new-date":79,"obj-case":83,"trim":104}],92:[function(require,module,exports){
+},{"./facade":92,"./utils":100,"is-email":77,"new-date":82,"obj-case":86,"trim":107}],95:[function(require,module,exports){
 'use strict';
 
 var Facade = require('./facade');
@@ -11747,7 +11787,7 @@ Facade.Screen = require('./screen');
 
 module.exports = Facade;
 
-},{"./alias":88,"./facade":89,"./group":90,"./identify":91,"./page":94,"./screen":95,"./track":96}],93:[function(require,module,exports){
+},{"./alias":91,"./facade":92,"./group":93,"./identify":94,"./page":97,"./screen":98,"./track":99}],96:[function(require,module,exports){
 'use strict';
 
 /**
@@ -11770,7 +11810,7 @@ module.exports = function(integration) {
   return !disabled[integration];
 };
 
-},{}],94:[function(require,module,exports){
+},{}],97:[function(require,module,exports){
 'use strict';
 
 var inherit = require('./utils').inherit;
@@ -11919,7 +11959,7 @@ Page.prototype.track = function(name) {
 
 module.exports = Page;
 
-},{"./facade":89,"./track":96,"./utils":97,"is-email":74}],95:[function(require,module,exports){
+},{"./facade":92,"./track":99,"./utils":100,"is-email":77}],98:[function(require,module,exports){
 'use strict';
 
 var inherit = require('./utils').inherit;
@@ -11991,7 +12031,7 @@ Screen.prototype.track = function(name) {
 
 module.exports = Screen;
 
-},{"./page":94,"./track":96,"./utils":97}],96:[function(require,module,exports){
+},{"./page":97,"./track":99,"./utils":100}],99:[function(require,module,exports){
 'use strict';
 
 var inherit = require('./utils').inherit;
@@ -12318,14 +12358,14 @@ function currency(val) {
 
 module.exports = Track;
 
-},{"./facade":89,"./identify":91,"./utils":97,"is-email":74,"obj-case":83}],97:[function(require,module,exports){
+},{"./facade":92,"./identify":94,"./utils":100,"is-email":77,"obj-case":86}],100:[function(require,module,exports){
 'use strict';
 
 exports.inherit = require('inherits');
 exports.clone = require('@ndhoule/clone');
 exports.type = require('type-component');
 
-},{"@ndhoule/clone":5,"inherits":73,"type-component":105}],98:[function(require,module,exports){
+},{"@ndhoule/clone":5,"inherits":76,"type-component":108}],101:[function(require,module,exports){
 
 /**
  * Generate a slug from the given `str`.
@@ -12350,7 +12390,7 @@ module.exports = function (str, options) {
     .replace(/ +/g, options.separator || '-')
 };
 
-},{}],99:[function(require,module,exports){
+},{}],102:[function(require,module,exports){
 
 var space = require('to-space-case')
 
@@ -12373,7 +12413,7 @@ function toCamelCase(string) {
   })
 }
 
-},{"to-space-case":102}],100:[function(require,module,exports){
+},{"to-space-case":105}],103:[function(require,module,exports){
 
 /**
  * Module Dependencies
@@ -12527,7 +12567,7 @@ function stripNested (prop, str, val) {
   });
 }
 
-},{"component-props":62,"props":62}],101:[function(require,module,exports){
+},{"component-props":65,"props":65}],104:[function(require,module,exports){
 
 /**
  * Expose `toNoCase`.
@@ -12599,7 +12639,7 @@ function uncamelize (string) {
     return previous + ' ' + uppers.toLowerCase().split('').join(' ');
   });
 }
-},{}],102:[function(require,module,exports){
+},{}],105:[function(require,module,exports){
 
 var clean = require('to-no-case')
 
@@ -12622,7 +12662,7 @@ function toSpaceCase(string) {
   }).trim()
 }
 
-},{"to-no-case":103}],103:[function(require,module,exports){
+},{"to-no-case":106}],106:[function(require,module,exports){
 
 /**
  * Export.
@@ -12691,7 +12731,7 @@ function uncamelize(string) {
   })
 }
 
-},{}],104:[function(require,module,exports){
+},{}],107:[function(require,module,exports){
 
 exports = module.exports = trim;
 
@@ -12707,7 +12747,7 @@ exports.right = function(str){
   return str.replace(/\s*$/, '');
 };
 
-},{}],105:[function(require,module,exports){
+},{}],108:[function(require,module,exports){
 
 /**
  * toString ref.
@@ -12739,7 +12779,7 @@ module.exports = function(val){
   return typeof val;
 };
 
-},{}],106:[function(require,module,exports){
+},{}],109:[function(require,module,exports){
 
 /**
  * Protocol.
@@ -12777,7 +12817,7 @@ function check () {
     location.protocol == 'chrome-extension:'
   );
 }
-},{}],107:[function(require,module,exports){
+},{}],110:[function(require,module,exports){
 (function (global){
 
 var rng;
@@ -12813,7 +12853,7 @@ module.exports = rng;
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],108:[function(require,module,exports){
+},{}],111:[function(require,module,exports){
 //     uuid.js
 //
 //     Copyright (c) 2010-2012 Robert Kieffer
@@ -12998,7 +13038,7 @@ uuid.unparse = unparse;
 
 module.exports = uuid;
 
-},{"./rng":107}],109:[function(require,module,exports){
+},{"./rng":110}],112:[function(require,module,exports){
 module.exports={
   "name": "@segment/analytics.js",
   "author": "Segment <friends@segment.com>",
